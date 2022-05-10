@@ -1,9 +1,9 @@
 #!/bin/bash
-REGEX=("debian" "ubuntu" "centos|red hat|kernel|oracle linux|alma|rocky" "'amazon linux'")
-RELEASE=("Debian" "Ubuntu" "CentOS" "CentOS")
-PACKAGE_UPDATE=("apt -y update" "apt -y update" "yum -y update" "yum -y update")
-PACKAGE_INSTALL=("apt -y install" "apt -y install" "yum -y install" "yum -y install")
-PACKAGE_UNINSTALL=("apt -y autoremove" "apt -y autoremove" "yum -y autoremove" "yum -y autoremove")
+REGEX=("debian" "ubuntu" "centos|red hat|kernel|oracle linux|amazon linux|alma|rocky")
+RELEASE=("Debian" "Ubuntu" "CentOS")
+PACKAGE_UPDATE=("apt -y update" "apt -y update" "yum -y update")
+PACKAGE_INSTALL=("apt -y install" "apt -y install" "yum -y install")
+PACKAGE_UNINSTALL=("apt -y autoremove" "apt -y autoremove" "yum -y autoremove")
 
 [[ $EUID -ne 0 ]] && exit 1
 
@@ -14,7 +14,7 @@ for i in "${CMD[@]}"; do
 done
 
 for ((int = 0; int < ${#REGEX[@]}; int++)); do
-    [[ $(echo "$SYS" | tr '[:upper:]' '[:lower:]') =~ ${REGEX[int]} ]] && SYSTEM="${RELEASE[int]}" && [[ -n $SYSTEM ]] && break
+    [[ $(echo "$SYS" | tr '[:upper:]' '[:lower:]') =~ ${REGEX[int]} ]] && SYSTEM="${RELEASE[int]}" && break
 done
 
 [[ -z $SYSTEM ]] && exit 1
@@ -25,27 +25,23 @@ eval "echo $TMTOKEN > .env"
 ARCH=$(uname -m)
 case "$ARCH" in
 aarch64 ) ARCHITECTURE="arm64";;
-x86_64 ) ARCHITECTURE="amd64";;
 * ) ARCHITECTURE="amd64";;
 esac
 
 if [ $SYSTEM = "CentOS" ]; then
-    yum install -y sudo
-    sudo yum install -y yum-utils
-    sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-    ! systemctl is-active docker >/dev/null 2>&1 && echo -e " \n Install docker \n " && sudo yum install -y docker-ce docker-ce-cli containerd.io
-    systemctl start docker
-    systemctl enable docker
+    ${PACKAGE_INSTALL[int]} yum-utils
+    yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    ! systemctl is-active docker >/dev/null 2>&1 && echo -e " \n Install docker \n " && ${PACKAGE_INSTALL[int]} docker-ce docker-ce-cli containerd.io
+    systemctl enable --now docker
     docker rm -f tm >/dev/null 2>&1
     if [ $ARCHITECTURE = "amd64" ]; then
         docker pull traffmonetizer/cli:latest
     else
         docker pull traffmonetizer/cli:arm64v8
     fi
-    docker run -d --name tm traffmonetizer/cli start accept --token "$TMTOKEN"
 else
     docker rm -f tm >/dev/null 2>&1
-    ! systemctl is-active docker >/dev/null 2>&1 && echo -e " \n Install docker \n " && apt -y install docker.io
+    ! systemctl is-active docker >/dev/null 2>&1 && echo -e " \n Install docker \n " && ${PACKAGE_INSTALL[int]} docker.io
     docker pull traffmonetizer/cli:latest
-    docker run -d --name tm traffmonetizer/cli start accept --token "$TMTOKEN"
 fi
+    docker run -d --name tm traffmonetizer/cli start accept --token "$TMTOKEN"
