@@ -27,6 +27,8 @@ traffmonetizer 是一种允许用户通过分享您的流量来赚钱的选项�
 curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh
 ```
 
+注册链接注册后，复制左上角的token，运行我的脚本，粘贴token，回车，即可开始安装。
+
 ### 免责声明
 
 本程序仅供学习了解, 非盈利目的，请于下载后 24 小时内删除, 不得用作任何商业用途, 文字、数据及图片均有所属版权, 如转载须注明来源。
