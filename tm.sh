@@ -33,7 +33,7 @@ if [ $SYSTEM = "CentOS" ]; then
     yum install -y sudo
     sudo yum install -y yum-utils
     sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-    sudo yum install -y docker-ce docker-ce-cli containerd.io
+    ! systemctl is-active docker >/dev/null 2>&1 && echo -e " \n Install docker \n " && sudo yum install -y docker-ce docker-ce-cli containerd.io
     systemctl start docker
     systemctl enable docker
     docker rm -f tm >/dev/null 2>&1
@@ -45,7 +45,7 @@ if [ $SYSTEM = "CentOS" ]; then
     docker run -d --name tm traffmonetizer/cli start accept --token "$TMTOKEN"
 else
     docker rm -f tm >/dev/null 2>&1
-    apt -y install docker.io
+    ! systemctl is-active docker >/dev/null 2>&1 && echo -e " \n Install docker \n " && apt -y install docker.io
     docker pull traffmonetizer/cli:latest
     docker run -d --name tm traffmonetizer/cli start accept --token "$TMTOKEN"
 fi
