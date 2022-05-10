@@ -15,6 +15,12 @@ traffmonetizer 是一种允许用户通过分享您的流量来赚钱的选项�
     
 3.多次运行自动更新docker镜像。
 
+### 信息
+
+- 本项目已经在 AMD64 和 ARM 上验证上测试通过
+- 感兴趣可以尝试一下， [注册链接](https://traffmonetizer.com/?aff=96902)
+
+
 ### 交互式使用方法
 
 ```shell
