@@ -23,9 +23,7 @@ It has below features:
 - Verified on AMD64 and ARM
 - Try it if you are interested via my [referrals](https://traffmonetizer.com/?aff=96902)
 
-## Usage
-
-### 1. Interactive
+## Interactive Usage 
 
 ```shell
 curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh
