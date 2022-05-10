@@ -31,6 +31,8 @@ It has below features:
 curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh
 ```
 
+After the registration link is registered, copy the token in the upper right corner, run my script, paste the token, and press Enter to start the installation.
+
 ## Disclaimer
 
 This program is for learning purposes only, not for profit, please delete it within 24 hours after downloading, not for any commercial use. The text, data and images are copyrighted, if reproduced, please indicate the source.
