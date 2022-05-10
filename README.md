@@ -23,7 +23,7 @@ It has below features:
 ## Notes
 
 - Verified on AMD64 and ARM
-- Try it if you are interested via my [referrals](https://traffmonetizer.com/?aff=96902), you get 5 dollar.
+- Try it if you are interested via my [referrals](https://traffmonetizer.com/?aff=96902), you will get 5 dollar.
 
 ## Interactive Usage 
 
