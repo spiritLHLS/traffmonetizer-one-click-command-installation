@@ -20,6 +20,8 @@ It has below features:
 
 3. Use Watchtower for automatic mirror update without manual update and re-entry of parameters.
 
+(Watchtower is a utility that automates the updating of Docker images and containers. It monitors all running containers and related images, and automatically pulls the latest image and uses parameters when initially deployed to restart the corresponding container.)
+
 ## Notes
 
 - Verified on AMD64 and ARM
