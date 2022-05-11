@@ -18,7 +18,7 @@ It has below features:
 
 2. Automatically select and build the pulled docker image according to the architecture, without the need for you to manually modify the official case.
 
-3. If you run the script multiple times, the docker image will be updated automatically.
+3. Use Watchtower for automatic mirror update without manual update and re-entry of parameters.
 
 ## Notes
 
