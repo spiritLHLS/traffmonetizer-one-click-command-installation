@@ -19,7 +19,7 @@ done
 
 [[ -z $SYSTEM ]] && exit 1
 
-read -p "Enter your token, something end with ==, if you do not find it, open https://traffmonetizer.com/?aff=96902: " TMTOKEN 
+read -p "Enter your token, something end with =, if you do not find it, open https://traffmonetizer.com/?aff=96902: " TMTOKEN 
 eval "echo $TMTOKEN > .env"
 
 ARCH=$(uname -m)
