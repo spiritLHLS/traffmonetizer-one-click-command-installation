@@ -24,8 +24,9 @@ eval "echo $TMTOKEN > .env"
 
 ARCH=$(uname -m)
 case "$ARCH" in
-aarch64 ) ARCHITECTURE="arm64";;
-* ) ARCHITECTURE="amd64";;
+aarch64 ) ARCHITECTURE="arm64v8";;
+x64|x86_64|amd64 ) ARCHITECTURE="latest";;
+* )  echo -e "ERROR: Unsupported architecture: $ARCH\n" && exit 1;;
 esac
 
 if [ $SYSTEM = "CentOS" ]; then
@@ -33,15 +34,10 @@ if [ $SYSTEM = "CentOS" ]; then
     yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
     ! systemctl is-active docker >/dev/null 2>&1 && echo -e " \n Install docker \n " && ${PACKAGE_INSTALL[int]} docker-ce docker-ce-cli containerd.io
     systemctl enable --now docker
-    docker rm -f tm >/dev/null 2>&1
-    if [ $ARCHITECTURE = "amd64" ]; then
-        docker pull traffmonetizer/cli:latest
-    else
-        docker pull traffmonetizer/cli:arm64v8
-    fi
 else
-    docker rm -f tm >/dev/null 2>&1
     ! systemctl is-active docker >/dev/null 2>&1 && echo -e " \n Install docker \n " && ${PACKAGE_INSTALL[int]} docker.io
-    docker pull traffmonetizer/cli:latest
 fi
-    docker run -d --name tm traffmonetizer/cli start accept --token "$TMTOKEN"
+
+docker rm -f tm >/dev/null 2>&1
+docker run -d --name tm traffmonetizer/cli:$ARCHITECTURE start accept --token "$TMTOKEN"
+docker run -d --name watchtower --restart always  -p 2095:8080 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup
