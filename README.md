@@ -14,7 +14,7 @@ This is the **first one-click installation script** of the whole network to auto
 
 It has below features:
 
-1. Automatically install dockers based on the system, and if dockers are already installed, they are not installed again.
+1. Automatically install docker based on the system, and if docker are already installed, it will not installed again.
 
 2. Automatically select and build the pulled docker image according to the architecture, without the need for you to manually modify the official case.
 
