@@ -40,4 +40,4 @@ fi
 
 docker rm -f tm >/dev/null 2>&1
 docker run -d --name tm traffmonetizer/cli:$ARCHITECTURE start accept --token "$TMTOKEN"
-docker run -d --name watchtower --restart always  -p 2095:8080 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup
+docker run -d --name watchtower --restart always  -p 2095:8080 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup >/dev/null 2>&1
