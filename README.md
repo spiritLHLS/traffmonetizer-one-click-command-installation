@@ -40,10 +40,10 @@ After the registration link is registered, copy the token in the upper left corn
 ### One command installation
 
 ```shell
-curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh -t 
+curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh -t PfDoKBDi38dD3B3wipLxbNWkdqxPoxlahal/tOYozss=
 ```
 
-Fill in your token at the end of the command.
+Change to your token at the end of this command
 
 ## Uninstall
 
