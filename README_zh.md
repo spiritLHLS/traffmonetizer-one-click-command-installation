@@ -23,13 +23,31 @@ traffmonetizer 是一种允许用户通过分享您的流量来赚钱的选项�
 - 感兴趣可以尝试一下，[注册链接](https://traffmonetizer.com/?aff=96902), 走我链接注册你获得5刀的注册奖励。
 
 
-### 交互式使用方法
+## 安装
+
+### 交互式安装
 
 ```shell
 curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh
 ```
 
-注册链接注册后，复制左上角的token，运行我的脚本，粘贴token，回车，即可开始安装。
+注册链接注册后，复制左上角的token，运行此命令，粘贴token，回车，即可开始安装。
+
+### 一键安装
+
+```shell
+curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh -t PfDoKBDi38dD3B3wipLxbNWkdqxPoxlahal/tOYozss=
+```
+
+在此命令的最后更改为你的token
+
+## 卸载
+
+```shell
+bash tm.sh -u
+```
+
+卸载服务
 
 ### 免责声明
 
