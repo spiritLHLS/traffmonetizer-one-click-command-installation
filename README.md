@@ -27,13 +27,31 @@ It has below features:
 - Verified on AMD64 and ARM
 - Try it if you are interested via my [referrals](https://traffmonetizer.com/?aff=96902), you will get 5 dollar.
 
-## Interactive Usage 
+## Install
+
+### Interactive installation
 
 ```shell
 curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh
 ```
 
 After the registration link is registered, copy the token in the upper left corner, run my script, paste the token, and press Enter to start the installation.
+
+### One command installation
+
+```shell
+curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh -t 
+```
+
+Fill in your token at the end of the command.
+
+## Uninstall
+
+```shell
+bash tm.sh -u
+```
+
+uninstall service
 
 ## Disclaimer
 
