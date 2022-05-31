@@ -55,7 +55,7 @@ check_virt(){
 
 # 输入 traffmonetizer 的个人 token
 input_token(){
-  [ -z $TMTOKEN ] && reading " Enter your token, something end with =, if you do not find it, open https://traffmonetizer.com/?aff=96902: " TMTOKEN
+  [ -z $TMTOKEN ] && reading " Enter your token, something end with =, if you do not find it, open https://traffmonetizer.com/?aff=247346: " TMTOKEN
 }
 
 container_build(){
