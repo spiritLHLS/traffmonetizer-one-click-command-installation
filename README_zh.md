@@ -35,7 +35,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-co
 ### 一键安装
 
 ```shell
-curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh -t PfDoKBDi38dD3B3wipLxbNWkdqxPoxlahal/tOYozss=
+curl -L https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/tm.sh -o tm.sh && chmod +x tm.sh && bash ./tm.sh -t ViRrn6FZQsfgmE9pjmyAPsEM7UD6epqMb4zcJ3WtQYk=
 ```
 
 在此命令的最后更改为你的token
