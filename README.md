@@ -10,7 +10,7 @@ The traffmonetizer is an option that allows users to earn money by sharing your 
 
 You'll receive $0.10 for the 1G traffic you share, and this script supports data center network or home bandwidth.
 
-This is the **first one-click installation script** of the whole network to automatically install dependencies and pull and install the latest docker, and the script will continue to be improved according to the platform update.
+This is the **first one-click installation script of the whole network** to automatically install dependencies and pull and install the latest docker, and the script will continue to be improved according to the platform update.
 
 It has below features:
 
@@ -25,7 +25,7 @@ It has below features:
 ## Notes
 
 - Verified on AMD64 and ARM
-- Try it if you are interested via my [referrals](https://traffmonetizer.com/?aff=247346), you will get 5 dollar.
+- Try it if you are interested via my --> [referrals](https://traffmonetizer.com/?aff=247346) <--, you will get 5 dollar.
 
 ## Install
 
