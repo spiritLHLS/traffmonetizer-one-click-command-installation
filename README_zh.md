@@ -52,9 +52,11 @@ bash tm.sh -u
 
 单IP挂国外，欧洲区日入0.010~0.015美元，美区估计会多点，单IP每日0.013以上不超过0.016吧。
 
-![](https://s3.bmp.ovh/imgs/2022/07/11/7287997d971c468e.png)
+**僧多粥少，人越多，收益越低**
 
-![](https://s3.bmp.ovh/imgs/2022/07/11/fd36598dd0483a21.png)
+![](https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/backup/a.png)
+
+![](https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/backup/b.png)
 
 2022.05 末尾就大幅度减少收益了，之前一天有0.025美元以上的。(本脚本在平台适配了linux的第15天创建)
 
