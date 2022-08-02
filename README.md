@@ -53,6 +53,16 @@ bash tm.sh -u
 
 uninstall service
 
+## Experience
+
+For a single IP, the daily income in Europe is 0.010~0.015 US dollars. It is estimated that there will be more in the United States. The daily income of a single IP is more than 0.013 and not more than 0.016.
+
+**More monks and less porridge, the more people, the lower the income**
+
+![](https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/backup/a.png)
+
+![](https://raw.githubusercontent.com/spiritLHLS/traffmonetizer-one-click-command-installation/main/backup/b.png)
+
 ## Disclaimer
 
 This program is for learning purposes only, not for profit, please delete it within 24 hours after downloading, not for any commercial use. The text, data and images are copyrighted, if reproduced, please indicate the source.
