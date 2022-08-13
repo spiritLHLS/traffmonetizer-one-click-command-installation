@@ -86,7 +86,7 @@ container_build(){
 
 # 显示结果
 result(){
-  docker ps -a | grep -q "$NAME" && docker ps -a | grep -q "watchtower" && green " Install success.\n" || red " install fail.\n"
+  docker ps -a | grep -q "$NAME" && green " Install success.\n" || red " install fail.\n"
 }
 
 # 卸载
