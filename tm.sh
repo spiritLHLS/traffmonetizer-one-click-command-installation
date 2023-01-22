@@ -79,7 +79,7 @@ container_build(){
 
   # 创建容器
   yellow " Create the traffmonetizer container.\n "
-  docker run -d --name $NAME traffmonetizer/cli:$ARCH start accept --token "$TMTOKEN" >/dev/null 2>&1
+  docker run -d --name $NAME traffmonetizer/cli:$ARCH --restart always accept --token "$TMTOKEN" >/dev/null 2>&1
 
   # 创建 Towerwatch
   [[ ! $(docker ps -a) =~ watchtower ]] && yellow " Create TowerWatch.\n " && docker run -d --name watchtower --restart always -p 2095:8080 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup >/dev/null 2>&1
