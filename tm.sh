@@ -26,11 +26,11 @@ check_operating_system(){
 
   for i in "${CMD[@]}"; do SYS="$i" && [[ -n $SYS ]] && break; done
 
-  REGEX=("debian" "ubuntu" "centos|red hat|kernel|oracle linux|amazon linux|alma|rocky")
-  RELEASE=("Debian" "Ubuntu" "CentOS")
-  PACKAGE_UPDATE=("apt -y update" "apt -y update" "yum -y update")
-  PACKAGE_INSTALL=("apt -y install" "apt -y install" "yum -y install")
-  PACKAGE_UNINSTALL=("apt -y autoremove" "apt -y autoremove" "yum -y autoremove")
+  REGEX=("debian" "ubuntu" "raspbian" "centos|red hat|kernel|oracle linux|amazon linux|alma|rocky")
+  RELEASE=("Debian" "Ubuntu" "Raspbian" "CentOS")
+  PACKAGE_UPDATE=("apt -y update" "apt -y update" "apt -y update" "yum -y update")
+  PACKAGE_INSTALL=("apt -y install" "apt -y install" "apt -y install" "yum -y install")
+  PACKAGE_UNINSTALL=("apt -y autoremove" "apt -y autoremove" "apt -y autoremove" "yum -y autoremove")
 
   for ((int = 0; int < ${#REGEX[@]}; int++)); do
     [[ $(echo "$SYS" | tr '[:upper:]' '[:lower:]') =~ ${REGEX[int]} ]] && SYSTEM="${RELEASE[int]}" && break
@@ -41,7 +41,7 @@ check_operating_system(){
 
 # 判断宿主机的 IPv4 或双栈情况,没有拉取不了 docker
 check_ipv4(){
-  ! curl -s4m8 ip.sb | grep -q '\.' && red " ERROR：The host must have IPv4. " && exit 1
+  ! curl -s4m8 ifconfig.co | grep -q '\.' && red " ERROR：The host must have IPv4. " && exit 1
 }
 
 # 判断 CPU 架构
@@ -49,6 +49,7 @@ check_virt(){
   ARCHITECTURE=$(uname -m)
   case "$ARCHITECTURE" in
     aarch64 ) ARCH=arm64v8;;
+    armv7l ) ARCH=arm32v7;;
     x64|x86_64|amd64 ) ARCH=latest;;
     * ) red " ERROR: Unsupported architecture: $ARCHITECTURE\n" && exit 1;;
   esac
