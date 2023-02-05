@@ -24,7 +24,7 @@ It has below features:
 
 ## Notes
 
-- Verified on AMD64, ARM and Raspbian
+- Verified on AMD64 and ARM
 - Try it if you are interested via my --> [referrals](https://traffmonetizer.com/?aff=247346) <--, you will get 5 dollar.
 
 ## Install
@@ -55,7 +55,9 @@ uninstall service
 
 ## Experience
 
-For a single IP, the daily income in Europe is 0.010~0.015 US dollars. It is estimated that there will be more in the United States. The daily income of a single IP is more than 0.013 and not more than 0.016.
+For a single IP, the daily income in Europe is 0.010~0.015 US dollars. 
+
+It is estimated that there will be more in the United States. The daily income of a single IP is more than 0.013 and not more than 0.02.
 
 **More monks and less porridge, the more people, the lower the income**
 
