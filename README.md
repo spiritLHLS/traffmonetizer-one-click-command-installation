@@ -24,7 +24,7 @@ It has below features:
 
 ## Notes
 
-- Verified on AMD64 and ARM
+- Verified on AMD64, ARM and Raspbian
 - Try it if you are interested via my --> [referrals](https://traffmonetizer.com/?aff=247346) <--, you will get 5 dollar.
 
 ## Install
