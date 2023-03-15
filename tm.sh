@@ -43,7 +43,7 @@ check_operating_system(){
 check_ipv4(){
   # 遍历本机可以使用的 IP API 服务商
   # 定义可能的 IP API 服务商
-  API_NET=("ip.sb" "ipget.net" "ip.ping0.cc" "https://ip4.seeip.org" "https://api.my-ip.io/ip" "https://ipv4.icanhazip.com" "api.ipify.org" "ifconfig.co")
+  API_NET=("ip.sb" "ipget.net" "ip.ping0.cc" "https://ip4.seeip.org" "https://api.my-ip.io/ip" "https://ipv4.icanhazip.com" "api.ipify.org")
 
   # 遍历每个 API 服务商，并检查它是否可用
   for p in "${API_NET[@]}"; do
