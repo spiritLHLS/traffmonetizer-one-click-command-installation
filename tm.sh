@@ -39,7 +39,7 @@ check_operating_system(){
   [[ -z $SYSTEM ]] && red " ERROR: The script supports Debian, Ubuntu, CentOS or Alpine systems only.\n" && exit 1
 }
 
-# 判断宿主机的 IPv4 或双栈情况,没有拉取不了 docker
+# 判断宿主机的 IPv4 或双栈情况 没有拉取不了 docker
 check_ipv4(){
   # 遍历本机可以使用的 IP API 服务商
   # 定义可能的 IP API 服务商
@@ -58,7 +58,7 @@ check_ipv4(){
     fi
   done
 
-  # 判断宿主机的 IPv4 、IPv6 和双栈情况,检测前先检查是否有非 WARP 的 IPv4
+  # 判断宿主机的 IPv4 、IPv6 和双栈情况
   ! curl -s4m8 $IP_API | grep -q '\.' && red " ERROR：The host must have IPv4. " && exit 1
 }
 
