@@ -111,7 +111,7 @@ container_build(){
   docker run -d --name $NAME --restart=unless-stopped traffmonetizer/cli_v2:$ARCH start accept --token "$TMTOKEN" >/dev/null 2>&1
 
   # 创建 Towerwatch
-  [[ ! $(docker ps -a) =~ watchtower ]] && yellow " Create TowerWatch.\n " && docker run -d --name watchtower --restart=always -p 2095:8080 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup >/dev/null 2>&1
+  [[ ! $(docker ps -a) =~ watchtower ]] && yellow " Create TowerWatch.\n " && docker run -d --name watchtower --restart=always -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup >/dev/null 2>&1
 }
 
 # 显示结果
